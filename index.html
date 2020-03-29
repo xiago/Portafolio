@@ -9,6 +9,11 @@
     </head>
     <body>
         <header class="header">
+            <div class="flexbox">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
             <div>
                 <figure class="logo">
                     <img src="imagenes/nombre.png" alt="Logo del http://christiangomez.com"/>
@@ -34,21 +39,40 @@
                 <strong>Desarrollador Javascript</strong> con<br/>
                 con pasión por <strong>enseñar</strong>.
             </h1>
-            <img src="imagenes/foto_perfil.jpg" width="300" height="300" alt="Imgen principal del sitio"/>
+            <!-- <img src="imagenes/foto_perfil.jpg" width="300" height="300" alt="Imgen principal del sitio"/> -->
         </section>
         <section id="portafolio" class="portfolio">
             <h2>Portafolio (Proyectos destacados)</h2>
             <article class="project">
-                <h3 class="project_title">Platzi Video</h3>
-                <h6 class="project_course">React Native / React</h6>
-                <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> <!--Small funciona para hacer mas pequeño al texto del parráfo-->
-                <p class="project_url"><small> <strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
-                <p class="project_description">
-                    Estudiar en Platzi ha sido todo un reto desde su adquisición.
-                    Me ha demostrado que la persistencia y las ganas de aprender,
-                    son el uníco camino a un estilo de vida que deja marcas en el
-                    <strong>mundo.</strong>
-                </p>
+                <div class="project_details">
+                    <h3 class="project_title">Platzi Video</h3>
+                    <h6 class="project_course">React Native / React</h6>
+                    <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> <!--Small funciona para hacer mas pequeño al texto del parráfo-->
+                    <p class="project_url"><small> <strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
+                    <p class="project_description">
+                        Estudiar en Platzi ha sido todo un reto desde su adquisición.
+                        Me ha demostrado que la persistencia y las ganas de aprender,
+                        son el uníco camino a un estilo de vida que deja marcas en el
+                        <strong>mundo.</strong>
+                    </p>
+                </div>
+                <figure class="project_imageContainer">
+                    <img class="project_image" src="imagenes/platzi-video-react-native.png" width="500" alt="react native">
+                </figure>
+            </article>
+            <article class="project">
+                <div class="project_details">
+                    <h3 class="project_title">Platzi Video</h3>
+                    <h6 class="project_course">React Native / React</h6>
+                    <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> <!--Small funciona para hacer mas pequeño al texto del parráfo-->
+                    <p class="project_url"><small> <strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
+                    <p class="project_description">
+                        Estudiar en Platzi ha sido todo un reto desde su adquisición.
+                        Me ha demostrado que la persistencia y las ganas de aprender,
+                        son el uníco camino a un estilo de vida que deja marcas en el
+                        <strong>mundo.</strong>
+                    </p>
+                </div>
                 <figure class="project_imageContainer">
                     <img class="project_image" src="imagenes/platzi-video-react-native.png" width="500" alt="react native">
                 </figure>
