@@ -1,0 +1,42 @@
+/*Reglas
+Selectores
+Declaraciones
+Propiedades
+Valores*/
+
+/*selector de etiqueta header-sectio-article-nav*/
+header 
+{
+    background: pink;  
+    color: red; 
+    /*El !important sirve para darle la unica autoridad a este tag.*/
+}
+/*selector descendente*/
+/* body header div nav ol li a */
+/* El selector de clase se declara a través de un punto . */
+
+/* .link */
+
+/* Los selectores de ID se declaran a través de un numeral*/
+/* #portafolio */
+
+body
+{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    /*font-style: italic;*/
+}
+
+h1
+{
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    /* text-transform: uppercase;
+    text-decoration: underline; */
+}
