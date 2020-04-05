@@ -2,12 +2,22 @@
 <html lang="es">
     <head>
         <title>Christian Gómez</title>
-        <meta charset="utf-8" />    
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="imagenes/logo2.png"/>
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/estilos.css">
+        <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"/> -->
+        <link rel="stylesheet" href="css/estilos.css"/>
+        <!-- <style>
+            @media screen and (max-width: 768px){
+                body{
+                    border: 10px solid blue;
+                }
+            }
+        </style> -->
     </head>
     <body>
+        <i class="icon-menu burger_button" id="burger-menu"></i>
         <header class="header">
             <div class="container">
                 <figure class="logo">
@@ -45,7 +55,7 @@
                     <div class="project_details">
                         <h3 class="project_title">Platzi Video</h3>
                         <h6 class="project_course">React Native / React</h6>
-                        <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> <!--Small funciona para hacer mas pequeño al texto del parráfo-->
+                        <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> 
                         <p class="project_url"><small> <strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
                         <p class="project_description">
                             Estudiar en Platzi ha sido todo un reto desde su adquisición.
@@ -62,7 +72,7 @@
                     <div class="project_details">
                         <h3 class="project_title">Platzi Video</h3>
                         <h6 class="project_course">React Native / React</h6>
-                        <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> <!--Small funciona para hacer mas pequeño al texto del parráfo-->
+                        <p class="project_date"><small> <strong>Fecha:</strong> 26/03/2020</small></p> 
                         <p class="project_url"><small> <strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
                         <p class="project_description">
                             Estudiar en Platzi ha sido todo un reto desde su adquisición.
@@ -77,6 +87,9 @@
                 </article>
             </div>
         </section>
+        <!-- <div class="video">
+            <video class="html_video" src="videos/Christian.mp4" controls></video>
+        </div> -->
         <div class="container">
             <h2 class="event_list_title">Más sobre mi Experiencia</h2>
         </div>
@@ -94,20 +107,6 @@
                         </p>
                         <a class="event_url" href="https://www.youtube.com/watch?v=ExsGyZDBlJQ&t=1s" target="_blank">Ver platica</a>
                     </div>
-                </article><!--un el atributo target="_blank", lo que hace es abrir el link en otra pestaña manteniendo nuestra pagina-->
-                <article class="event">
-                    <figure class="event_imageContainer">
-                        <img class="event_image" src="imagenes/platzi-conf.jpg" width="300" height="300" alt="platzi-conf"/>
-                    </figure>
-                    <div class="event_details">
-                        <h3 class="event_title">PlatziConf México 2020</h3>
-                        <p class="event_description">Es un evento anual de Platzi
-                            que realiza la start-up platzi para exposiciones acerca
-                            de la tecnología a la vanguardia.
-                        </p>
-                        </p>
-                        <a class="event_url" href="https://www.youtube.com/watch?v=ExsGyZDBlJQ&t=1s" target="_blank">Ver platica</a>
-                    </div>
                 </article>
                 <article class="event">
                     <figure class="event_imageContainer">
@@ -125,7 +124,27 @@
                 </article>
                 <article class="event">
                     <figure class="event_imageContainer">
-                        <img class="event_image" src="imagenes/platzi-conf.jpg" width="300" height="300" alt="platzi-conf"/>
+                        <div class="video">
+                            <video class="html_video" src="videos/Christian.mp4" controls></video>
+                        </div>
+                        <!-- <img class="event_image" src="imagenes/platzi-conf.jpg" width="300" height="300" alt="platzi-conf"/> -->
+                    </figure>
+                    <div class="event_details">
+                        <h3 class="event_title">PlatziConf México 2020</h3>
+                        <p class="event_description">Es un evento anual de Platzi
+                            que realiza la start-up platzi para exposiciones acerca
+                            de la tecnología a la vanguardia.
+                        </p>
+                        </p>
+                        <a class="event_url" href="https://www.youtube.com/watch?v=ExsGyZDBlJQ&t=1s" target="_blank">Ver platica</a>
+                    </div>
+                </article>
+                <article class="event">
+                    <figure class="event_imageContainer">
+                        <div class="flexible_video">
+                            <iframe class="youtube_video" width="560" height="315" src="https://www.youtube.com/embed/smP1fzt7T2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <!-- <img class="event_image" src="imagenes/platzi-conf.jpg" width="300" height="300" alt="platzi-conf"/> -->
                     </figure>
                     <div class="event_details">
                         <h3 class="event_title">PlatziConf México 2020</h3>
@@ -144,8 +163,6 @@
                 <form action="/suscripcion/" class="form_email">
                     <h3>¿Creamos algo juntos?</h3>
                     <input type="text" placeholder="Déjame tu E-mail" id="email">
-                    <!--El atributo placeholder funciona para dejar un valor 
-                    escrito en la caja de texto del input-->
                     <button>Enviar</button>
                 </form>
                 <div class="social">
@@ -166,5 +183,33 @@
                 </div>
             </div>
         </footer>
+        <script>
+            // console.log('hola mundo');
+            const ipad = window.matchMedia('screen and (max-width: 767px)');
+            const menu = document.querySelector('.menu');
+            // console.log(menu);
+            const burgerButton = document.querySelector('#burger-menu');
+            // console.log(burgerButton);
+
+            ipad.addListener(validation)
+
+            function validation(event){
+                if(event.matches){
+                    burgerButton.addEventListener('click', hideShow); 
+                } else{
+                    burgerButton.removeEventListener('click', hideShow);
+                }
+            }
+            validation(ipad);
+            function hideShow(){
+                if(menu.classList.contains('is-active')){
+                    menu.classList.remove('is-active');
+                }
+                else{
+                    menu.classList.add('is-active');
+                }
+            }
+        </script>
+
     </body>
 </html>
